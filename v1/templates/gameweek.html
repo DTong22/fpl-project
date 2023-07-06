@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gameweek Predictions</title>
+    <style>
+        body {
+            background-color: #38003c;
+            color: #ffffff;
+        }
+
+        h1 {
+            color: #04f5ff;
+        }
+
+        h2 {
+            color: #e90052;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            color: #e90052;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gameweek Predictions</h1>
+
+    {% for gameweek, players in predictions.items() %}
+        <h2>Gameweek {{ gameweek }}</h2>
+        <table>
+            <tr>
+                <th>Player ID</th>
+                <th>Predicted Points</th>
+                <th>Total Points</th>
+            </tr>
+            {% for player in players %}
+                <tr>
+                    <td>{{ player['player_id'] }}</td>
+                    <td>{{ player['predicted_points']|round(1) }}</td>
+                    <td>{{ player['total_points'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endfor %}
+</body>
+</html>

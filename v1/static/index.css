@@ -1,0 +1,18 @@
+/* index.css */
+
+body {
+    background-color: #38003c;
+    color: #ffffff;
+  }
+  
+  h1{
+    color: #04f5ff;
+  }
+  
+  a {
+    color: #00ff85;
+  }
+  
+  .container {
+    background-color: #ffffff;
+  }
