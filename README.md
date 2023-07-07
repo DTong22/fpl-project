@@ -30,3 +30,9 @@ Predict top 5 players in FPL gameweeks
 
 ### Machine Learning Methods
 * Linear Regression
+
+### Future Imporovements
+* More seasons data
+* Use more features
+* Different algorithms
+* Cloud based
